@@ -66,4 +66,5 @@ Should see: OK
 Connect using the IPv4:
 
 
-http://<EC2_PUBLIC_IPv4>:5000/
+ex: [http://<EC2_PUBLIC_IPv4>:5000/](http://3.234.218.40:5000/
+)
