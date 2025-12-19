@@ -2,6 +2,7 @@
 CS-351 Project Auto Scaling AWS W/ Alex Roessler
 
 Assuming the AWS EC2 Instance is running:
+Ensure ports 22, 80, and 5000 are open
 
 **Step 1: Connect to ssh**
 
