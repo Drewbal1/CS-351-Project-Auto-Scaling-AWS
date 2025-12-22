@@ -60,7 +60,7 @@ source venv/bin/activate #if not already in venv
 
 locust --headless --users 1000 --spawn-rate 10 -H http://3.234.218.40:5000/
 
-#users indicates the total number of connections and the spawn rate determines how many connections happen at a time
+#users sets the total number of connections, and the spawn rate determines how many connections happen at a time
 
 
 Connect using the IPv4:
