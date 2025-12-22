@@ -32,7 +32,6 @@ git clone https://github.com/Drewbal1/CS-351-Project-Auto-Scaling-AWS.git flask
 cd flask
 
 
-
 **Create the virtual env (first time only):**
 
 cd ~/flask         #if not already here
@@ -44,28 +43,27 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 
-**Run Flask app with gunicorn:**
-
-cd ~/flask          #if not already here
-
-source venv/bin/activate
-
-nohup gunicorn -b 0.0.0.0:5000 app:app > gunicorn.log 2>&1 &
-
-
-
-**Step 3: Confirm and connect**
+**Confirm connection**
 
 Verify server is running:
-
 
 curl http://127.0.0.1:5000/health
 
 Should see: OK
 
 
-Connect using the IPv4:
+**Step 3: Run Flask app and use locust:**
 
+cd ~/flask          #if not already here
+
+source venv/bin/activate #if not already in venv
+
+locust --headless --users 1000 --spawn-rate 10 -H http://3.234.218.40:5000/
+
+#users indicates the total number of connections and the spawn rate determines how many connections happen at a time
+
+
+Connect using the IPv4:
 
 ex: [http://<EC2_PUBLIC_IPv4>:5000/](http://3.234.218.40:5000/
 )
